@@ -5,13 +5,13 @@
   <title>Grateful for You</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
+<body class="page">
   <button id="music-btn">Play music 🎵</button>
 
 <audio id="bg-music" loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
-
-<body class="page">
 
   <h1>I’m grateful for you</h1>
 
@@ -27,6 +27,20 @@
   </p>
 
   <a href="love.html" class="button">One last thing →</a>
+<script>
+  const btn = document.getElementById("music-btn");
+  const music = document.getElementById("bg-music");
+
+  btn.onclick = () => {
+    if (music.paused) {
+      music.play();
+      btn.textContent = "Pause music ⏸";
+    } else {
+      music.pause();
+      btn.textContent = "Play music 🎵";
+    }
+  };
+</script>
 
 </body>
 </html>
