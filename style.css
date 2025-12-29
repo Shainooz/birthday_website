@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #fff5f8;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.page {
+  max-width: 700px;
+  margin: auto;
+  padding: 80px 30px;
+  animation: fadeIn 1.5s ease;
+}
+
+.center {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.soft {
+  color: #666;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 30px;
+  background: #ff9bb8;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.button:hover {
+  background: #ff7fa5;
+}
+
+/* Music button */
+#music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ff9bb8;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9em;
+  z-index: 10;
+}
+
+/* Floating elements */
+.floating {
+  position: fixed;
+  bottom: -20px;
+  font-size: 20px;
+  opacity: 0.6;
+  animation: floatUp 12s linear infinite;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-120vh);
+  }
+}
+
+/* Fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
